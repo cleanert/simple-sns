@@ -69,7 +69,7 @@ public class UserControllerTest {
         String userName = "testUserName";
         String password = "testPassword";
 
-        when(userService.login()).thenReturn("test_token");
+        when(userService.login(userName, password)).thenReturn("test_token");
 
         mockMvc.perform(post("/api/v1/users/login")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -85,7 +85,7 @@ public class UserControllerTest {
         String userName = "testUserName";
         String password = "testPassword";
 
-        when(userService.login()).thenThrow(new AppException());
+        when(userService.login(userName, password)).thenThrow(new AppException());
 
         mockMvc.perform(post("/api/v1/users/login")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -101,7 +101,7 @@ public class UserControllerTest {
         String userName = "testUserName";
         String password = "testPassword";
 
-        when(userService.login()).thenThrow(new AppException());
+        when(userService.login(userName, password)).thenThrow(new AppException());
 
         mockMvc.perform(post("/api/v1/users/login")
                         .contentType(MediaType.APPLICATION_JSON)
