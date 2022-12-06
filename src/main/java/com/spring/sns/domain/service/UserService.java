@@ -1,13 +1,12 @@
 package com.spring.sns.domain.service;
 
-import com.spring.sns.domain.model.User;
+import com.spring.sns.domain.dto.UserDTO;
+import com.spring.sns.domain.dto.request.UserJoinRequestDTO;
 import com.spring.sns.domain.model.entity.UserEntity;
 import com.spring.sns.domain.repository.UserRepository;
 import com.spring.sns.web.exception.AppException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -15,14 +14,30 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public User join(String userName, String password) {
+//    public UserDTO join(String userName, String password) {
+////        회원가입하는 userName으로 회원가입된 user가 있는지
+//        userRepository.findByUserName(userName)
+//                .ifPresent(user -> {
+//                    throw new AppException();
+//                });
+//
+////        회원가입 진행 = user를 등록
+//        UserEntity userEntity = userRepository.save(UserEntity.of(userName, password));
+//
+//        return UserDTO.fromEntity(userEntity);
+//    }
+
+        public UserDTO join(UserJoinRequestDTO request) {
 //        회원가입하는 userName으로 회원가입된 user가 있는지
-        Optional<UserEntity> userEntity = userRepository.findByUserName(userName);
+        userRepository.findByUserName(request.getUserName())
+                .ifPresent(user -> {
+                    throw new AppException();
+                });
 
 //        회원가입 진행 = user를 등록
-        userRepository.save(new UserEntity());
+        UserEntity userEntity = userRepository.save(UserEntity.of(request));
 
-        return new User();
+        return UserDTO.fromEntity(userEntity);
     }
 
     public String login(String userName, String password) {

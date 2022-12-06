@@ -3,7 +3,7 @@ package com.spring.sns.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.sns.domain.dto.request.UserLoginRequestDTO;
 import com.spring.sns.domain.dto.request.UserJoinRequestDTO;
-import com.spring.sns.domain.model.User;
+import com.spring.sns.domain.dto.UserDTO;
 import com.spring.sns.domain.service.UserService;
 import com.spring.sns.web.exception.AppException;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class UserControllerTest {
+public class UserDTOControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -37,7 +37,7 @@ public class UserControllerTest {
         String userName = "testUserName";
         String password = "testPassword";
 
-        when(userService.join(userName, password)).thenReturn(mock(User.class));
+        when(userService.join(userName, password)).thenReturn(mock(UserDTO.class));
 
         mockMvc.perform(post("/api/v1/users/join")
                         .contentType(MediaType.APPLICATION_JSON)

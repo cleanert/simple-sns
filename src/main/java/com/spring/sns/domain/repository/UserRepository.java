@@ -1,6 +1,5 @@
 package com.spring.sns.domain.repository;
 
-import com.spring.sns.domain.model.User;
 import com.spring.sns.domain.model.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
