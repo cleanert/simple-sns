@@ -1,4 +1,4 @@
-package com.spring.sns.domain.dto.request;
+package com.spring.sns.domain.dto.signUp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

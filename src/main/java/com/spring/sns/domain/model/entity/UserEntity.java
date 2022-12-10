@@ -1,6 +1,5 @@
 package com.spring.sns.domain.model.entity;
 
-import com.spring.sns.domain.dto.request.UserJoinRequestDTO;
 import com.spring.sns.domain.model.UserRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,7 +50,6 @@ public class UserEntity {
         this.updatedAt = Timestamp.from(Instant.now());
     }
 
-//    변환 메서드 (dto로 받은 데이터로 userEntity객체 생성) dto -> entity
 //    public static UserEntity of(String userName, String password) {
 //        UserEntity userEntity = new UserEntity();
 //        userEntity.setUserName(userName);
@@ -60,10 +58,10 @@ public class UserEntity {
 //        return userEntity;
 //    }
 
-    public static UserEntity of(UserJoinRequestDTO request) {
+    public static UserEntity of(String userName, String password) {
         UserEntity userEntity = new UserEntity();
-        userEntity.setUserName(request.getUserName());
-        userEntity.setPassword(request.getPassword());
+        userEntity.setUserName(userName);
+        userEntity.setPassword(password);
 
         return userEntity;
     }

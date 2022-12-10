@@ -1,4 +1,4 @@
-package com.spring.sns.domain.dto.response;
+package com.spring.sns.domain.dto.signUp;
 
 import com.spring.sns.domain.dto.UserDTO;
 import com.spring.sns.domain.model.UserRole;

@@ -1,4 +1,4 @@
-package com.spring.sns.domain.dto.response;
+package com.spring.sns.web.exception.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
