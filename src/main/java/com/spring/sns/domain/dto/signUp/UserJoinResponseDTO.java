@@ -3,7 +3,9 @@ package com.spring.sns.domain.dto.response;
 import com.spring.sns.domain.dto.UserDTO;
 import com.spring.sns.domain.model.UserRole;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@Getter
 @AllArgsConstructor
 public class UserJoinResponseDTO {
 
