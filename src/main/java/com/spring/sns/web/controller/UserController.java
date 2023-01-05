@@ -1,11 +1,11 @@
 package com.spring.sns.web.controller;
 
 import com.spring.sns.domain.dto.UserDTO;
-import com.spring.sns.domain.dto.login.UserLoginRequestDTO;
-import com.spring.sns.domain.dto.login.UserLoginResponseDTO;
-import com.spring.sns.domain.dto.signUp.UserJoinRequestDTO;
+import com.spring.sns.domain.dto.request.UserLoginRequestDTO;
+import com.spring.sns.domain.dto.response.UserLoginResponseDTO;
+import com.spring.sns.domain.dto.request.UserJoinRequestDTO;
 import com.spring.sns.web.exception.response.ResultResponse;
-import com.spring.sns.domain.dto.signUp.UserJoinResponseDTO;
+import com.spring.sns.domain.dto.response.UserJoinResponseDTO;
 import com.spring.sns.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

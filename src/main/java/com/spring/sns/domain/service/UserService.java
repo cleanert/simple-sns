@@ -1,7 +1,6 @@
 package com.spring.sns.domain.service;
 
 import com.spring.sns.domain.dto.UserDTO;
-import com.spring.sns.domain.dto.login.UserLoginRequestDTO;
 import com.spring.sns.domain.model.entity.UserEntity;
 import com.spring.sns.domain.repository.UserRepository;
 import com.spring.sns.util.JwtTokenUtils;

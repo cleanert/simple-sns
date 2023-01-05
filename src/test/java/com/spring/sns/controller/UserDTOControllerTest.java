@@ -1,8 +1,8 @@
 package com.spring.sns.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.spring.sns.domain.dto.login.UserLoginRequestDTO;
-import com.spring.sns.domain.dto.signUp.UserJoinRequestDTO;
+import com.spring.sns.domain.dto.request.UserLoginRequestDTO;
+import com.spring.sns.domain.dto.request.UserJoinRequestDTO;
 import com.spring.sns.domain.dto.UserDTO;
 import com.spring.sns.domain.service.UserService;
 import com.spring.sns.web.exception.AppBaseException;

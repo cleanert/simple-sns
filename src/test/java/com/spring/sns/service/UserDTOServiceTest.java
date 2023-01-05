@@ -1,7 +1,7 @@
 package com.spring.sns.service;
 
-import com.spring.sns.domain.dto.signUp.UserJoinRequestDTO;
-import com.spring.sns.domain.dto.login.UserLoginRequestDTO;
+import com.spring.sns.domain.dto.request.UserJoinRequestDTO;
+import com.spring.sns.domain.dto.request.UserLoginRequestDTO;
 import com.spring.sns.domain.model.entity.UserEntity;
 import com.spring.sns.domain.repository.UserRepository;
 import com.spring.sns.domain.service.UserService;
